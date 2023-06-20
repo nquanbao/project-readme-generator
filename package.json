@@ -1,0 +1,22 @@
+{
+  "name": "project-readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nquanbao/project-readme-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nquanbao/project-readme-generator/issues"
+  },
+  "homepage": "https://github.com/nquanbao/project-readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
