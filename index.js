@@ -89,8 +89,6 @@ const generateHTML = ({ title, discription1,discription2,discription3,discriptio
 - [Question](#questions)
 
 ## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
     ${installation}
 
 ## Usage
@@ -112,7 +110,9 @@ The last section of a high-quality README file is the license. This lets other d
 
 ## Questions
     GitHub User name : ${github}
-    Email address : ${email}
+    
+    If you have any question, please contact me by e-mail.
+    My e-mail address : ${email}
 `;
 
 inquirer
