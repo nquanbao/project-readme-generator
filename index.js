@@ -63,22 +63,22 @@ const licenseInfo = [
     }
 ]
 
-const generateReadMe = ({ title, discription1,discription2,discription3,installation,license,contributing,test,github,email},licenseInformation,link,badgeEL) =>
+const generateReadMe = ({ title, discription1,discription2,discription3,installation,license,contributing,test,github,email},licenseInformation,link,badgeEL,img) =>
 `# ${title}     ![Badge](${badgeEL})
 
 ## Description
 
 - What was your motivation?
     
-${discription1}
+    ${discription1}
 
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
     
-${discription2}
+    ${discription2}
 
 - What did you learn?
     
-${discription3}
+    ${discription3}
 
 ## Table of Contents:
 
@@ -87,7 +87,7 @@ ${discription3}
 - [License](#license)
 - [Contributing](#how-to-contribute)
 - [Test](#tests)
-- [Question](#questions)
+- [Questions](#questions)
 
 ## Installation
 
@@ -95,13 +95,13 @@ ${discription3}
 
 ## Usage
 
-![Screenshot of the App](./ReadMe.md)
+![Sreenshot of App](${img})
 
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
-${license}: [${link}](${link})
+[${license}](${link})
     
     ${licenseInformation}    
 
@@ -113,7 +113,7 @@ ${license}: [${link}](${link})
 
 ## Questions
 
-- GitHub username : [${github}](https://github.com/${github})
+- My GitHub: [${github}](https://github.com/${github})
 
 - If you have any question or need to report any issues about the application, please contact me by e-mail.
 
@@ -181,8 +181,9 @@ inquirer
             var licenseInformation = licenseInfo[i].information;
             var link = licenseInfo[i].link;
             var badgeEL = licenseInfo[i].badge;
-            const readmecontent = generateReadMe(answers,licenseInformation,link,badgeEL);
-            fs.writeFile('ReadMe.md', readmecontent, (err) =>
+            var img = './assets/img/screenshot.png';
+            const readmecontent = generateReadMe(answers,licenseInformation,link,badgeEL,img);
+            fs.writeFile('README.md', readmecontent, (err) =>
             err ? console.log(err) : console.log('Successfully created ReadMe.md!')
             );
         }
