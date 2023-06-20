@@ -63,24 +63,25 @@ const licenseInfo = [
     }
 ]
 
-const generateHTML = ({ title, discription1,discription2,discription3,discription4,installation,Usage,license,contributing,test,github,email},licenseInformation,link,badgeEL) =>
-`# ${title}     ![alt text](${badgeEL})
+const generateReadMe = ({ title, discription1,discription2,discription3,installation,license,contributing,test,github,email},licenseInformation,link,badgeEL) =>
+`# ${title}     ![Badge](${badgeEL})
 
 ## Description
 
 - What was your motivation?
-    ${discription1}
+    
+${discription1}
 
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-    ${discription2}
-
-- What problem does it solve?
-    ${discription3}
+    
+${discription2}
 
 - What did you learn?
-    ${discription4}
+    
+${discription3}
 
 ## Table of Contents:
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -89,16 +90,18 @@ const generateHTML = ({ title, discription1,discription2,discription3,discriptio
 - [Question](#questions)
 
 ## Installation
+
     ${installation}
 
 ## Usage
-    ${Usage}
+
+![Screenshot of the App](./ReadMe.md)
 
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
-    🏆 ${license} : (${link})
+${license}: [${link}](${link})
     
     ${licenseInformation}    
 
@@ -109,10 +112,12 @@ The last section of a high-quality README file is the license. This lets other d
     ${test}
 
 ## Questions
-    GitHub User name : ${github}
-    
-    If you have any question, please contact me by e-mail.
-    My e-mail address : ${email}
+
+- GitHub username : [${github}](https://github.com/${github})
+
+- If you have any question or need to report any issues about the application, please contact me by e-mail.
+
+- My e-mail address : [${email}](${email})
 `;
 
 inquirer
@@ -135,22 +140,12 @@ inquirer
       {
         type: 'input',
         name: 'discription3',
-        message: 'What problem does it solve?',
-      },
-      {
-        type: 'input',
-        name: 'discription4',
         message: 'What did you learn?',
       },
     {
       type: 'input',
       name: 'installation',
       message: 'How do you install your app in step by step?',
-    },
-    {
-      type: 'input',
-      name: 'Usage',
-      message: 'What is your Usage?',
     },
     {
       type: 'list',
@@ -186,8 +181,8 @@ inquirer
             var licenseInformation = licenseInfo[i].information;
             var link = licenseInfo[i].link;
             var badgeEL = licenseInfo[i].badge;
-            const htmlPageContent = generateHTML(answers,licenseInformation,link,badgeEL);
-            fs.writeFile('ReadMe.md', htmlPageContent, (err) =>
+            const readmecontent = generateReadMe(answers,licenseInformation,link,badgeEL);
+            fs.writeFile('ReadMe.md', readmecontent, (err) =>
             err ? console.log(err) : console.log('Successfully created ReadMe.md!')
             );
         }

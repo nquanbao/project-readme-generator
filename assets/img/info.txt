@@ -1,0 +1,4 @@
+Discription :
+    ReadMe Generator app help you to create quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+Installation :
+    Install Node.js and Inquirer 8.2.4. by the code : npm init and npm i inquirer@8.2.4. Write the code into index.js file. 
