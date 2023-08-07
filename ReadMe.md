@@ -1,18 +1,18 @@
-# README GENERATOR     ![Badge](https://img.shields.io/badge/license-MIT-blue)
+# SVG Logo Maker     ![Badge](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description
 
 - What was your motivation?
     
-    ReadMe Generator app help you to create quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+    takes in user input to generate a logo and save it as an SVG fileLinks to an external site.. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
 
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
     
-    for assignment
+    For weekly assignment
 
 - What did you learn?
     
-    Node js
+    learn more about node js
 
 ## Table of Contents:
 
@@ -25,11 +25,12 @@
 
 ## Installation
 
-    Install Node.js and Inquirer 8.2.4. by the code : npm init and npm i inquirer@8.2.4. Write the code into index.js file.
+    Creat a repo on GitHub and clone it to local computer. Coding for Shape.js, text.js, and index.js. Run the indexsx.js to create a svg file by tthe command line is node index.js
 
 ## Usage
 
 ![Sreenshot of App](./assets/img/screenshot.png)
+[link to walkthrough video](./assets/img/ReadMe%20Generator%20(1).mp4)
 
 ## License
 
@@ -40,10 +41,10 @@ The last section of a high-quality README file is the license. This lets other d
     A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.    
 
 ## Contributing
-    need more modifing the content
+    Tried to work more class and function
 
 ## Tests
-    run as a test at local computer
+    run node index.js to test the result
 
 ## Questions
 
