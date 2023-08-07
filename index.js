@@ -96,6 +96,7 @@ const generateReadMe = ({ title, discription1,discription2,discription3,installa
 ## Usage
 
 ![Sreenshot of App](${img})
+[link to walkthrough video](./assets/img/ReadMe%20Generator%20(1).mp4))
 
 ## License
 
